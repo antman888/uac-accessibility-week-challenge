@@ -1,83 +1,139 @@
-<html lang="eng">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <link href="style.css" />
+    <title>UAC Accessibliity Test</title>
+    <style>
+      body {
+        padding: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      section {
+        margin-bottom: 32px;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      table thead {
+        background-color: #575959;
+        color: #ffffff;
+      }
+      table tr th, table tr td {
+        padding: 0.25rem 0.5rem;
+        text-align: left;
+        border: 1px solid #000000;
+      }
+
+      form div {
+        margin-bottom: 8px;
+      }
+      
+    </style>
   </head>
   <body>
-    <div>I am a title</div>
-    <div>
-      This is a accessibility challenge! try to get a score of 100 on
-      lighthouse!
-    </div>
-    <a href="https://www.w3.org/WAI/WCAG21/quickref/">
-      <!-- I am missing a link name -->
-    </a>
-    <div>
-      <div>I am a section header</div>
-      <img src="./catonkeyboard.jpeg"/>
+    <header>
+      <h1>I am a title</h1>
       <div>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        This is a accessibility challenge! try to get a score of 100 on
+        lighthouse!
       </div>
-      <br />
-        <div>I am another section header</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-      </div>
-      <br></br>
-      <div>
-        <div>Main Disability Groups</div>
-        <li>Vision</li>
-        <li>Hearing</li>
-        <li>Physical</li>
-        <li>Cognitive</li>
-      </div>
-      <br></br>
-      <div>
-        <div>Different types of accessibility issues table</div>
-        <table>
-            <tr>
-              <th>Vision</th>
-              <th>Hearing</th>
-              <th>Physical</th>
-              <th>Cognitive</th>
-            </tr>
-            <tr>
-              <td>Blind</td>
-              <td>Deaf or partially deaf</td>
-              <td>Broken arm</td>
-              <td>Dyslexia</td>
-            </tr>
-        </table>
+      <a href="https://www.w3.org/WAI/WCAG21/quickref/">
+        WCAG quick reference guide
+      </a>
+    </header>
 
-      </div>
-      <br></br>
-      <div>
-        <div>This is a form</div>
-        <form action="/" method="post">
-          First Name
-          <input type="text" tabindex="1"/>
-          <br><br>
-          Last Name
-          <input type="text" /> 
-          <br><br>
-          <input type="email" />
-          <br><br>
-          <input type="password" />
-          <br>
-          <button type="button" />
-          </button>
-      </form>
-      </div>
-      <br/>
-    </div>
-        <div>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</div>
-        <span>by your name, 2022</span>
-    
-    <div>Copyright your name. All rights reserved</div>
+    <body>
+      <section>
+        <h2>I am a section header</h2>
+        <img src="./catonkeyboard.jpeg" alt="Photo of a cat laying on a laptop keyboard looking into the camera" />
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum.
+        </div>
+        </section>
+        <section>
+          <h2>I am another section header</h2>
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        </div>
+        </section>
+        
+        <section>
+          <div>
+            <h2>Main Disability Groups</h2>
+            <ul>
+              <li>Vision</li>
+              <li>Hearing</li>
+              <li>Physical</li>
+              <li>Cognitive</li>
+            </ul>
+          </div>
+        </section>
+        
+        <section>
+          <h2>Different types of accessibility issues table</h2>
+          <table>
+              <thead>
+                <tr>
+                  <th>Vision</th>
+                  <th>Hearing</th>
+                  <th>Physical</th>
+                  <th>Cognitive</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Blind</td>
+                  <td>Deaf or partially deaf</td>
+                  <td>Broken arm</td>
+                  <td>Dyslexia</td>
+                </tr>
+              </tbody>
+          </table>
+        </section>
+        
+        <section>
+          <h2>This is a form</h2>
+          <form action="/" method="post">
+            <div>
+              <label>First Name
+                <input type="text" name="firstName" />
+              </label>
+            </div>
+            <div>
+              <label>
+                Last Name
+                <input type="text" name="lastName" /> 
+              </label>
+            </div>
+            <div>
+              <label>
+                Email
+                <input type="email" name="email" />
+              </label>
+            </div>
+            <div>
+              <label>
+                Password
+                <input type="password" name="password" />
+              </label>
+            </div>
+            <button type="submit">
+              Submit
+            </button>
+        </form>
+      </section>
+    </body>
+      
+    <footer>
+      <div>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</div>
+      <span>by Anthony Trinh, 2022</span>
+      <div>Copyright Anthony Trinh. All rights reserved</div>
+    </footer>
   </body>
 </html>
